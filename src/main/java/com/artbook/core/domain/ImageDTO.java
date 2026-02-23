@@ -19,6 +19,6 @@ public class ImageDTO {
     private Integer likes;
     private Boolean liked;
     private List<ImageTag> tags;
-    private Resource resource;
+    //private Resource resource;
     private String contentType;
 }
