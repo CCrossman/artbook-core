@@ -7,6 +7,7 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @ToString
-public class ErrorDTO {
-    private String type, message;
+public class MessageDTO {
+    private MessageType type;
+    private String classification, message;
 }

@@ -13,6 +13,20 @@ import java.util.List;
 public class PageDTO<T> {
     private List<T> content;
     private Integer count, limit, offset;
-    private ErrorDTO error;
+    private MessageDTO message;
     private OrderDTO order;
+
+    public Integer getOneIndexedPageNumber() {
+        if (offset == null || limit == null) {
+            return null;
+        }
+        if (offset % limit != 0) {
+            throw new IllegalStateException("Offset should be a multiple of limit.");
+        }
+        return 1 + (offset / limit);
+    }
+
+    public Integer getPageSize() {
+        return limit;
+    }
 }
