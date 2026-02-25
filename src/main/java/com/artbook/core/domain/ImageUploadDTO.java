@@ -2,6 +2,7 @@ package com.artbook.core.domain;
 
 import lombok.*;
 
+import java.util.List;
 import java.util.Map;
 
 @AllArgsConstructor
@@ -13,5 +14,5 @@ import java.util.Map;
 public class ImageUploadDTO {
     private String globalId;
     private MessageDTO aggregation;
-    private Map<ImageType, MessageDTO> summaries;
+    private Map<ImageType, List<MessageDTO>> summaries;
 }
